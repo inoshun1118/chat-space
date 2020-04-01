@@ -1,0 +1,36 @@
+.chat-main
+  .chat-main__group-info
+    .group-info__name
+      .group-name
+        test
+      .group-users
+        Member : asd
+    = link_to "#", class: "group-info__edit" do
+      Edit
+  .chat-main__message-list
+    .message
+      .message__upper-info
+        .user
+          asd
+        .datetime
+          2020/04/1(Wed) 12:30:47
+      .text
+        test
+
+    .message2
+      .message__upper-info2
+        .user2
+          asd
+        .datetime2
+          2020/04/1(Wed) 12:30:47
+      .text2
+        test
+
+  .chat-main__message-form
+    .new-message
+      .input-box
+        %input{type: "text", class: "input-box__text ", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn", value: "Send"}

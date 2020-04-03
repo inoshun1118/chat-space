@@ -44,38 +44,25 @@
   }
   }
   
-  &__group-lists{
+  &__group-list{
     height: calc(100vh - 100px);
     width: 100%;
     background-color: #2f3e51;
     padding: 20px 20px 0;
-    &__group-list{
+    &__groups{
       height: 45px;
       width: 100%;
       color: #ffffff;
       font-weight: bold;
       margin-bottom: 40px;
-      &__name{
-        font-size: 15px;
-        margin-bottom: 5px;
-      }
-      &__message{
-        font-size: 11px;
-      }
-    }
-
-    &__group-list2{
-      height: 45px;
-      width: 100%;
-      color: #ffffff;
-      font-weight: bold;
-      margin-bottom: 40px;
-      &__name2{
-        font-size: 15px;
-        margin-bottom: 5px;
-      }
-      &__message2{
-        font-size: 11px;
+      .group{
+        &__name{
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+        &__message{
+          font-size: 11px;
+        }
       }
     }
   }

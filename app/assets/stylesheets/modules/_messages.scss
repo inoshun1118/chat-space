@@ -55,13 +55,17 @@
       color: #ffffff;
       font-weight: bold;
       margin-bottom: 40px;
-      .group{
+      &__group{
         &__name{
           font-size: 15px;
           margin-bottom: 5px;
         }
         &__message{
           font-size: 11px;
+        }
+        a {
+          color: #ffffff;
+          text-decoration: none;
         }
       }
     }
@@ -81,19 +85,23 @@
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
-    &__name{
+    &__leftbox{
       height: 64px;
       width: 83px;
       margin-top: 35px;
-      &__group-name{
-        font-size: 20px;
-        color: #333333;
-        margin-bottom: 15px;
-      }
-      &__group-users{
-        font-size: 12px;
-        color: #999999;
-      }
+        &__current{
+          font-size: 20px;
+          color: #333333;
+          margin-bottom: 15px;
+        }
+        &__group-users{
+          display: flex;
+          font-size: 12px;
+          color: #999999;
+          &__member{
+            margin-left: 5px;
+          }
+        }
     }
     &__edit{
       color: #38aef0;
@@ -132,31 +140,8 @@
         color: #434A54;
       }
     }
-
-    &__message2{
-      padding-bottom: 40px;
-      &__upper-info2{
-        margin-bottom: 10px;
-        display: flex;
-        &__user2{
-          font-size: 16px;
-          color: #333333;
-          font-weight: bold;
-        }
-        &__datetime2{
-          font-size: 12px;
-          color: #999999;
-          margin-left: 10px;
-        }
-      }
-      &__text2{
-        font-size: 14px;
-        color: #434A54;
-      }
-    }
   }
-
-  &__message-form{
+  &__form{
     height: 90px;
     width: 100%;
     background-color: #d2d2d2;
@@ -165,35 +150,42 @@
       display: flex;
       height: 100%;
       width: 100%;
-      .submit-btn{
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: #38aef0;
-        color: white;
-        cursor: pointer;
-      }
       &__input-box{
         display: flex;
         height: 100%;
         width: 100%;
-        position: relative;
-        &__text{
+        .submit-btn{
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+          cursor: pointer;
+        }
+        &__textimage{
+          display: flex;
           height: 100%;
           width: 100%;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          border-style: none;
-        }
-        &__image{
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          &__file{
-            display: none;
+          position: relative;
+          &__text{
+            height: 100%;
+            width: 100%;
+            padding: 0 40px 0 10px;
+            color: #434a54;
+            border-style: none;
+          }
+          .form__mask{
+            &__image{
+              font-size: 1.3rem;
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              cursor: pointer;
+              .hidden{
+                display: none;
+              }
+            }
           }
         }
       }
